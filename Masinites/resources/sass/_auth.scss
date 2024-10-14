@@ -1,0 +1,34 @@
+.auth-nav {
+    display: flex; /* Ensure flexbox for nav items */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+.auth-nav .nav-item {
+    margin: 0 30px; /* Add margin between nav items for larger spacing */
+}
+
+.auth-nav .nav-link {
+    background: none; /* Remove background */
+    color: #90919a; /* Default color for unselected tabs */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.2s ease; /* Smooth color transition */
+    padding: 10px 15px; /* Ensure padding for the tabs */
+    line-height: 1.5; /* Ensure line height is consistent */
+}
+
+.auth-nav .nav-link:hover {
+    text-decoration: none; /* No underline on hover */
+    color: #ffffff; /* Change color on hover */
+}
+
+.auth-nav .nav-link.active {
+    color: #06b628; /* Darker green for the active tab */
+    text-decoration: underline; /* Underline for active tab */
+    background-color: transparent; /* Ensure no blue background on active */
+}
+
+/* Prevent Bootstrap button styles from affecting nav links */
+.nav-pills .nav-link {
+    padding: 0.5rem 1rem; /* Adjust padding to match button sizes */
+}

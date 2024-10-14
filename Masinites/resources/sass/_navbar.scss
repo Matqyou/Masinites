@@ -1,0 +1,123 @@
+.custom-navbar {
+    background-image: url('../../public/images/navbar.jpg'); /* Using Laravel's url() helper */
+    background-size: cover;
+    background-position: center;
+    min-height: 80px; /* Adjusted minimum height */
+    padding-top: 15px; /* Space above */
+    padding-bottom: 15px; /* Space below */
+    position: relative;
+
+    display: flex; /* Enable flexbox layout */
+    justify-content: space-between; /* Distribute space between brand/cats and auth links */
+    align-items: center; /* Center items vertically */
+}
+
+.overlay {
+    position: absolute;  /* Position overlay on top of the navbar */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65);  /* Black color with 65% transparency */
+    z-index: 0;  /* Ensure overlay is below the text */
+}
+
+.navbar-brand-wrapper {
+    display: flex; /* Enable flexbox for brand and categories */
+    align-items: center; /* Center vertically */
+}
+
+.navbar-categories {
+    display: flex; /* Enable flexbox to arrange categories horizontally */
+    margin-left: 30px; /* Space between brand and categories */
+}
+
+.navbar-brand {
+    color: white;  /* Change text color for better contrast */
+    z-index: 1;  /* Ensure text is on top of the overlay */
+    position: relative;
+    font-weight: bold; /* Make text bold */
+    font-size: 1.5rem; /* Increase font size for brand name (adjust as needed) */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the brand name */
+.navbar-brand:hover {
+    color: #f0f0f0; /* Change hover color to a lighter shade */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+.nav-link {
+    color: white;  /* Change text color for better contrast */
+    z-index: 1;  /* Ensure text is on top of the overlay */
+    position: relative;
+    margin-right: 15px; /* Added margin for spacing */
+    font-weight: bold; /* Make text bold */
+    font-size: 1.1rem; /* Keep nav links slightly smaller than brand name */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
+
+    // Optional: add focus styles for accessibility
+    &:focus {
+        color: #f0f0f0; /* Ensure color remains visible when focused */
+        text-decoration: underline; /* Keep underline on focus */
+    }
+}
+
+/* Hover effect */
+.nav-link:hover {
+    color: #f0f0f0; /* Change hover color to a lighter shade */
+    transform: translateY(-3px); /* Move link slightly up on hover */
+    text-decoration: none; /* Remove underline on hover */
+}
+
+/* Active state for navbar links */
+.nav-link.active {
+    color: #f0f0f0; /* Ensure active link color matches hover color */
+    text-decoration: underline; /* Optional: keep the underline for visibility */
+}
+
+/* Dropdown toggle styles */
+.nav-item.dropdown .nav-link {
+    color: white; /* Default color for dropdown toggle */
+}
+
+.nav-item.dropdown .nav-link:hover,
+.nav-item.dropdown .nav-link:focus,
+.nav-item.dropdown .nav-link:active {
+    color: #f0f0f0; /* Change color on hover, focus, and active states */
+    text-decoration: underline; /* Optional: underline for better visibility */
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.8); /* Set background to dark */
+    border: none; /* Remove border for cleaner look */
+    z-index: 999; /* Ensure dropdown is above other elements */
+}
+
+.dropdown-item {
+    color: white; /* Default color for dropdown items */
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
+    color: #f0f0f0; /* Change text color on hover for visibility */
+}
+
+.dropdown-item:focus {
+    color: #f0f0f0; /* Ensure the text color remains visible when focused */
+    background-color: rgba(255, 255, 255, 0.2); /* Keep background light when focused */
+}
+
+.navbar-nav {
+    display: flex; /* Enable flexbox for nav items */
+    align-items: center; /* Center vertically */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px; /* Add spacing between category links */
+}
+
+.navbar {
+    z-index: 1;  /* Ensure the navbar is on top */
+}

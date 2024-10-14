@@ -4,5 +4,34 @@
 // Variables
 @import 'variables';
 
-// Bootstrap
+//// Bootstrap
+//@import 'bootstrap/scss/bootstrap';
+
+// Custom Bootstrap Overrides
+$body-bg: #121212; // Set body background to dark
+$body-color: white; // Set text color to white
+$navbar-dark-bg: #1f1f1f; // Set dark navbar background
+$navbar-dark-color: white; // Set navbar text color to white
+$navbar-dark-hover-color: #f0f0f0; // Set hover color for navbar links
+$dropdown-bg: rgba(0, 0, 0, 0.8); // Set dropdown background color
+
+// New Card Background Variable
+$card-bg: #1e1e1e; // Slightly lighter dark tone for the cards
+$card-border: #2a2a2a; // Optional: set a border color for cards
+
+// Import Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+// Import Navbar styles
+@import 'navbar';
+// Import Card styles
+@import 'cards';
+// Import Footer styles
+@import 'footer';
+
+@import 'auth';
+
+body {
+    background-color: #121212; /* A dark background color */
+    color: white; /* Set text color to white for contrast */
+}

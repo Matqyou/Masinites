@@ -1,0 +1,11 @@
+.footer {
+    background-color: #343a40; // Darker shade for footer
+}
+
+.footer a {
+    transition: color 0.3s; // Smooth transition for hover effect
+}
+
+.footer a:hover {
+    color: #f0f0f0; // Lighter color on hover for visibility
+}
