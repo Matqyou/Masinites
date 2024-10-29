@@ -25,10 +25,10 @@
                         {{ config('app.name') }}
                     </a>
                     <div class="navbar-categories">
-                        <!-- Add category links here -->
-                        <a class="nav-link" href="#">Dashboard</a>
-                        <a class="nav-link" href="#">Vehicles</a>
-                        <a class="nav-link" href="#">Contact & Support</a>
+                        <!-- Use named routes for each link -->
+                        <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
+                        <a class="nav-link" href="{{ route('vehicles') }}">Vehicles</a>
+                        <a class="nav-link" href="{{ route('contact-support') }}">Contact & Support</a>
                     </div>
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
